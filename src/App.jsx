@@ -22,6 +22,7 @@ function App() {
   const [todos, setTodo] = useState(["a", "b"]);
 
   const onSubmit = (e) => {
+    e.preventDefault();
     const newTodosArray = [...todos];
     newTodosArray.push(e.target.textField.value);
     setTodo(newTodosArray);
