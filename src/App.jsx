@@ -30,7 +30,6 @@ function App() {
     newTodosArray.push(e.target.textField.value);
     setTodo(newTodosArray);
     e.target.textField.value = "";
-    e.preventDefault();
   };
 
   return (
