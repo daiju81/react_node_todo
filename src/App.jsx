@@ -75,7 +75,12 @@ function App() {
       </Paper>
       <ul>
         {todos.map((todo, key) => {
-          return <li key={key}>{todo}</li>;
+          return (
+            <li key={key}>
+              <input type="radio" name="todosRadio" id="todosRadio" />
+              {todo}
+            </li>
+          );
         })}
       </ul>
     </div>
