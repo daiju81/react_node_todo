@@ -16,7 +16,6 @@ function App() {
   }));
   const classes = useStyles();
 
-  const [text, setText] = useState("Text Before changed");
   const [textbox, setTextBox] = useState("");
 
   const [todos, setTodo] = useState(["a", "b"]);
@@ -38,14 +37,6 @@ function App() {
         <Typography variant="h5" component="h3">
           Sample Component
         </Typography>
-        <Typography component="p">{text}</Typography>
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={() => setText("Button Pressed!")}
-        >
-          PRESS HERE!
-        </Button>
         <form
           className={classes.root}
           noValidate
