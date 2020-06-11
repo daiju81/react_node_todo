@@ -71,8 +71,8 @@ function App() {
         </form>
       </Paper>
       <ul>
-        {todos.map((todo, index) => {
-          return <li key="index">{todo}</li>;
+        {todos.map((todo, key) => {
+          return <li key={key}>{todo}</li>;
         })}
       </ul>
     </div>
