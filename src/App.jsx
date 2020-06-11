@@ -23,6 +23,9 @@ function App() {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    if (!e.target.textField.value) {
+      return;
+    }
     const newTodosArray = [...todos];
     newTodosArray.push(e.target.textField.value);
     setTodo(newTodosArray);
