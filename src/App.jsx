@@ -19,13 +19,12 @@ function App() {
   const [text, setText] = useState("Text Before changed");
   const [textbox, setTextBox] = useState("");
 
-  const todosArray = ["a", "b"];
   const [todos, setTodo] = useState(["a", "b"]);
 
   const onSubmit = (e) => {
-    todosArray.push(e.target.textField.value);
-    setTodo(todosArray);
-    console.log(e.target.textField.value);
+    const newTodosArray = [...todos];
+    newTodosArray.push(e.target.textField.value);
+    setTodo(newTodosArray);
     e.target.textField.value = "";
     e.preventDefault();
   };
@@ -72,14 +71,9 @@ function App() {
         </form>
       </Paper>
       <ul>
-        {/* {todosArray.map((todo, index) => {
-          return (
-            <li key={index} className="">
-              {todo}
-            </li>
-          );
-        })} */}
-        {todos}
+        {todos.map((todo, index) => {
+          return <li key="index">{todo}</li>;
+        })}
       </ul>
     </div>
   );
