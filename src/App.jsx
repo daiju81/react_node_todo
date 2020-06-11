@@ -35,7 +35,7 @@ function App() {
     <div className="App">
       <Paper className={classes.root}>
         <Typography variant="h5" component="h3">
-          Sample Component
+          Todo App
         </Typography>
         <form
           className={classes.root}
